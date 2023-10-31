@@ -8,6 +8,10 @@ class MensajesManager:
     def limpiar_mensajes(self):
         self.mensajes.clear()
 
+    def imprimir_Mensajes(self):
+        for mensaje in self.mensajes:
+            print("Mensajes: ", mensaje.texto)
+
     def obtener_hashtags(self):
         hashtags = set()
         for mensaje in self.mensajes:
