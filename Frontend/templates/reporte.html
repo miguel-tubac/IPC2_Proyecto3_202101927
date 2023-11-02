@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reporte</title>
+</head>
+<body>
+<h1>{{ idNombre_reporte }}</h1>
+<p1>{{ respuesta }}</p1>
+
+{% if existe %}
+	{% for valor in valores %}
+        <li>{{ valor }}</li>
+    {% endfor %}
+{% else %}
+        <p>No existen valores</p>
+{% endif %}
+
+<p>{{ valores.0 }}</p>
+<p>{{ valores.1 }}</p>
+<p>{{ valores.2 }}</p>
+</body>
+</html>
