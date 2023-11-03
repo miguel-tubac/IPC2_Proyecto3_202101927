@@ -17,12 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 # Aca importo mis funcionalidades:
-from Frontend.view import getInfoEstudiante, reporte, incio
+from Frontend.view import incio, procesar_configuracion, getInfoEstudiante, mostrarDocumentacion
 
 # Aca debo de colocar las direcciones de cada url
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('getinfo/',getInfoEstudiante),
-    path('reporte/',reporte),
-    path('', incio)
+    #path('admin/', admin.site.urls),
+    path('datos-estudiante/',getInfoEstudiante),
+    path('procesar_configuracion/', procesar_configuracion),
+    path('', incio),
+    path('datos-estudiante/Documentacion/', mostrarDocumentacion)
 ]

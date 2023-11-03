@@ -2,22 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Reporte</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Estudiante</title>
+    <!-- Enlace a Bootstrap (Puedes usar CDNs o descargar e incluir los archivos) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 <body>
-<h1>{{ idNombre_reporte }}</h1>
-<p1>{{ respuesta }}</p1>
 
-{% if existe %}
-	{% for valor in valores %}
-        <li>{{ valor }}</li>
-    {% endfor %}
-{% else %}
-        <p>No existen valores</p>
-{% endif %}
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header">
+            <h3>Perfil de Estudiante</h3>
+        </div>
+        <div class="card-body">
+            <ul class="list-group">
+                <li class="list-group-item">Nombre: Miguel Adrian Tubac Agustin</li>
+                <li class="list-group-item">Carnet: 202101927</li>
+                <li class="list-group-item">Curso: Introduccion a la Programacion y Computacion 2 seccion "N"</li>
+                <li class="list-group-item">Carrera: Ingenieria en Ciencias y Sistemas</li>
+                <li class="list-group-item">Semestre: 6to. Semestre</li>
+            </ul>
+        </div>
+            <div class="card-footer">
+                <!-- Botón para regresar al inicio -->
+                <a href="http://127.0.0.1:8000/" class="btn btn-primary">Inicio</a>
+                <a href="Documentacion" class="btn btn-primary">Documentacion</a>
+            </div>
+    </div>
+</div>
 
-<p>{{ valores.0 }}</p>
-<p>{{ valores.1 }}</p>
-<p>{{ valores.2 }}</p>
+
+
+<!-- Enlace a Bootstrap JS y Popper.js (si es necesario) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

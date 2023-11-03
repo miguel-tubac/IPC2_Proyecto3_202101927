@@ -24,6 +24,9 @@
             <div id="resetearDatosCollapse" class="accordion-collapse collapse show" aria-labelledby="resetearDatosHeader" data-bs-parent="#opcionesAccordion">
                 <div class="accordion-body">
                     <!-- Contenido para resetear datos -->
+                    <ul>
+                        <li><a href="#">Resetear</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -38,6 +41,17 @@
             <div id="cargarMensajesCollapse" class="accordion-collapse collapse" aria-labelledby="cargarMensajesHeader" data-bs-parent="#opcionesAccordion">
                 <div class="accordion-body">
                     <!-- Contenido para cargar mensajes -->
+                    <form action="http://127.0.0.1:8000/" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            {% csrf_token %}
+                            <label for="archivoConfiguracion" class="form-label">Selecciona un archivo XML:</label>
+                            {% csrf_token %}
+                            <input type="file" class="form-control" id="archivoConfiguracion" name="archivoConfiguracion" accept=".xml">
+                        </div>
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-primary">Cargar</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -53,12 +67,15 @@
             <div id="cargarConfiguracionCollapse" class="accordion-collapse collapse" aria-labelledby="cargarConfiguracionHeader" data-bs-parent="#opcionesAccordion">
                 <div class="accordion-body">
                     <!-- Contenido para cargar configuración -->
-                    <form action="#" method="post" enctype="multipart/form-data">
+                    <form action="http://127.0.0.1:8000/" method="post" enctype="multipart/form-data">
                         {% csrf_token %}
                         <div class="mb-3">
+                            {% csrf_token %}
                             <label for="archivoConfiguracion" class="form-label">Selecciona un archivo XML:</label>
+                            {% csrf_token %}
                             <input type="file" class="form-control" id="archivoConfiguracion" name="archivoConfiguracion" accept=".xml">
                         </div>
+                        {% csrf_token %}
                         <button type="submit" class="btn btn-primary">Cargar</button>
                     </form>
                 </div>
@@ -80,7 +97,7 @@
                         <li><a href="#">Consultar menciones</a></li>
                         <li><a href="#">Consultar sentimientos en mensajes</a></li>
                         <li><a href="#">Gráfica</a></li>
-                        <li><a href="#">Ayuda</a></li>
+                        <li><a href="datos-estudiante">Ayuda</a></li>
                     </ul>
                 </div>
             </div>
